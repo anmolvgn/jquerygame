@@ -4,8 +4,12 @@
     <meta charset="utf-8">
     <title>Crystal Game</title>
     <h2>Crystals!</h2>
-    
+  
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <!--jquery CDN-->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script> 
 
   </head>
   <body>
@@ -17,16 +21,16 @@
             <img col-md-3 src="assets/images/quartz2.jpg" alt="white quartz">
           </button>
 
-          <button type="button" name="blue">
-            <img col-md-3 id="blue" height="250px" src="assets/images/blue quartz.png" alt="blue quartz">
+          <button type="button" name="blue" id="blue">
+            <img col-md-3 height="250px" src="assets/images/blue quartz.png" alt="blue quartz">
           </button>
 
-          <button type="button" name="purple">
-            <img col-md-3 id="purple" height="250px" width="250px" src="assets/images/original quartz.jpg" alt="purple quartz">
+          <button type="button" name="purple" id="purple">
+            <img col-md-3 height="250px" width="250px" src="assets/images/original quartz.jpg" alt="purple quartz">
           </button>
 
-          <button type="button" name="gold">
-            <img col-md-3 id="gold" height="250px" src="assets/images/gold crystal.jpg" alt="gold rocks">
+          <button type="button" name="gold" id="gold">
+            <img col-md-3 height="250px" src="assets/images/gold crystal.jpg" alt="gold rocks">
           </button>
 
         </div>
@@ -34,11 +38,19 @@
     </div>
 
     <script type="text/javascript" src="assets/js/game.js"></script>
-    <h1> Match This: <script> var sum </script> </h1>
-    <br>
+    
+    <div class="container">
+      <div class="row">
+        <h1 col-lg-6 id="mt"> Match This: <script type="text/javascript" src="assets/js/game.js"> $(randomNumber).text </script> </h1>
+        <h1 col-lg-6> Score <script type="text/javascript" src="assets/js/game.js">  </script> 
+        </h1>
+      </div>
+    </div>
+   
+    <hr>
+   
     <div class="container">
       <h1><strong>Scoreboard</strong></h1>
-      <hr>
       <div class="row">
         <h2 col-lg-6>Wins:</h2>
         <h2 col-lg-6> Losses: </h2>
