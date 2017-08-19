@@ -1,55 +1,68 @@
-var randomNumber = function randomNumber() {
-    var randomNumber = Math.floor(Math.random()*146)+1;
+function randomNumber() {
+    // var randomNumber = Math.floor(Math.random()*146)+1;
+    // return Math.floor(Math.random()*146)+1;
+    Math.floor(Math.random() * (146)+1);
     console.log(randomNumber);
 };
 randomNumber();
-$("#mt").text;
-var sum = whiteNumber + blueNumber + purpleNumber + goldNumber;
+$("#mt").text();
+// var sum = whiteNumber + blueNumber + purpleNumber + goldNumber;
 // console.log(sum);
 
-var whiteNumber;
-var blueNumber;
-var purpleNumber;
-var goldNumber;
+// var whiteNumber;
+// var blueNumber;
+// var purpleNumber;
+// var goldNumber;
 
-
-function white (whiteNumber){
-	var whiteNumber = Math.floor(Math.random()*20)+1;
+function white (min, max){
+	var min = 0;
+  var max = 20;
+  // $("#white").on("click", white());
+  return Math.floor(Math.random()*(max-min+1)+min);
+  // console.log(Math.floor(Math.random()*(max-min+1)+min));
   console.log(this);
 };
-$("#white").on("click", white());
 
-function blue (blueNumber){
+$("#white").on("click", white(min,max));
+
+function blue (min, max){
   var min = 21;
   var max = 31;
-  var blueNumber = blueNumberFromRange(21,31);
-
+  $("#blue").on("click", blue(21, 31));
   return Math.floor(Math.random()*(max-min+1)+min);
 
+  // $("#blue").on("click", blue(21, 31));
+
+  // return blueNumber;  
+  // console.log(blueNumber);
 };
-$("#blue").on("click", blue());
+blue();
 
-function purple (purpleNumber){
-  var min = 43;
-  var max = 53;
-  var purpleNumber = purpleNumberFromRange(43,53);
+function purple (min, max){
+  // var max = 53;
+  // var min = 43;
+  $("#purple").on("click", purple(32, 42));
+  return Math.floor(Math.random()*(max-min+1)+min);
+  // return purpleNumber;
+  // $("#purple").on("click", purple(32, 42));
+  console.log(min);
+  // console.log(max);
+};
 
+purple();
+
+function gold (min, max){
+  // var min = 43;
+  // var max = 53;
+  $("#gold").on("click", gold(43,53));
   return Math.floor(Math.random()*(max-min+1)+min);
 
+  // return goldNumber;
+  // $("#gold").on("click", gold(43,53));
+  // console.log(this);
 };
 
-$("#purple").on("click", purple());
-
-function gold (goldNumber){
-  var min = 43;
-  var max = 53;
-  var goldNumber = goldNumberFromRange(43,53);
-
-  return Math.floor(Math.random()*(max-min+1)+min);
-
-};
-$("#gold").on("click", gold());
-
+gold();
 // console.log(sum + white);
 
 
